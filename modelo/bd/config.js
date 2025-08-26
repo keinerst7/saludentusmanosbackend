@@ -6,10 +6,9 @@ const dbConfig = {
     user: process.env.DATABASE_USER || process.env.DB_USER || 'root',
     password: process.env.DATABASE_PASSWORD || process.env.DB_PASSWORD || '',
     database: process.env.DATABASE_NAME || process.env.DB_NAME || 'saludentusmanos',
-    // Configuraciones adicionales para Railway
+    // Configuraciones válidas para mysql2
     connectTimeout: 60000,
-    acquireTimeout: 60000,
-    timeout: 60000
+    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
 };
 
 module.exports = dbConfig;
