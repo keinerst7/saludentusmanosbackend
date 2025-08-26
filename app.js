@@ -49,13 +49,14 @@ app.use('/api/correo', emailRoutes);                 // Rutas para enviar correo
 
 // -------------------- Servidor --------------------
 
-// Puerto de ejecución
-const PORT = 3030;
+// Puerto de ejecución - ACTUALIZADO PARA RAILWAY
+const PORT = process.env.PORT || 3030;
 
 // Si el archivo es ejecutado directamente (no importado como módulo), iniciamos el servidor
 if (require.main === module) {
-  app.listen(PORT, () => {
-    console.log(`Servidor escuchando en http://localhost:${PORT}`);
+  // ACTUALIZADO: Bind a 0.0.0.0 para Railway
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Servidor escuchando en puerto ${PORT}`);
   });
 }
 
