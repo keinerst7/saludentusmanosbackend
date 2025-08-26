@@ -2,7 +2,8 @@
 const pool = require('./bd/Conexion');
 
 // Importamos bcrypt para manejar el hash (encriptación) de contraseñas
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
+
 
 class UserModel {
   // Obtener todos los usuarios

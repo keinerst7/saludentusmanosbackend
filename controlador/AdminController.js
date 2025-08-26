@@ -1,5 +1,5 @@
 const pool = require('./bd/Conexion');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 class UserModel {
   static async getAll() {

@@ -95,7 +95,8 @@ describe('Users API', () => {
         id: 1,
         name: 'Keiner',
         email: 'keiner@test.com',
-        password: await require('bcrypt').hash('1234', 10),
+        password: await require('bcryptjs').hash('1234', 10),
+
       };
 
       UserModel.getByEmail.mockResolvedValue(fakeUser);
@@ -131,7 +132,7 @@ describe('Users API', () => {
         id: 1,
         name: 'Keiner',
         email: 'keiner@test.com',
-        password: await require('bcrypt').hash('1234', 10),
+        password: await require('bcryptjs').hash('1234', 10),
       };
 
       UserModel.getByEmail.mockResolvedValue(fakeUser);

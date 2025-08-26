@@ -2,7 +2,7 @@
 const UserModel = require('../modelo/usersModel');
 
 // Importamos bcrypt para manejar el hash y comparación de contraseñas
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 class UserController {
   // Obtener todos los usuarios

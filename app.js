@@ -50,7 +50,7 @@ app.use('/api/correo', emailRoutes);                 // Rutas para enviar correo
 // -------------------- Servidor --------------------
 
 // Puerto de ejecución
-const PORT = 3000;
+const PORT = 3030;
 
 // Si el archivo es ejecutado directamente (no importado como módulo), iniciamos el servidor
 if (require.main === module) {
